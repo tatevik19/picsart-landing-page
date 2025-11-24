@@ -832,10 +832,11 @@ export const LinksWrapperSection = (): JSX.Element => {
           transform-origin: top center;
         }
       `}</style>
-      <section
-        className="pl-3 lg:pl-6 pr-0 py-10 lg:py-16 bg-background-colorstint-2 flex flex-col w-full max-w-[1552px] items-center gap-6 sm:gap-8 md:gap-12 relative flex-[0_0_auto] mx-auto overflow-x-visible"
-        aria-label="Background editing tools"
-      >
+      <div className="w-full bg-background-colorstint-2">
+        <section
+          className="pl-3 lg:pl-6 pr-0 py-10 lg:py-16 flex flex-col w-full max-w-[1552px] items-center gap-6 sm:gap-8 md:gap-12 relative flex-[0_0_auto] mx-auto overflow-x-visible"
+          aria-label="Background editing tools"
+        >
       <div className="flex flex-col lg:flex-row w-full max-w-[1600px] items-start gap-10 relative flex-[0_0_auto] lg:justify-between overflow-x-visible pr-0 mr-0">
         <div className="flex flex-col w-full lg:w-[502px] items-start justify-between px-0 relative self-stretch">
           <div className="flex flex-col items-start gap-6 sm:gap-8 md:gap-12 relative self-stretch w-full flex-[0_0_auto]">
@@ -1165,6 +1166,7 @@ export const LinksWrapperSection = (): JSX.Element => {
         </div>
       </div>
     </section>
+      </div>
     </>
   );
 };
