@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const exploreLinks = [
   { text: "Image tools", highlighted: false },
-  { text: "Video tools", highlighted: true },
+  { text: "Video tools", highlighted: false },
   { text: "Design tools", highlighted: false },
   { text: "AI tools", highlighted: false },
   { text: "Templates", highlighted: false },
@@ -84,8 +84,8 @@ export const FooterSection = (): JSX.Element => {
     <footer className="relative self-stretch w-full min-h-[642px]">
       <div className="w-full min-h-[642px] bg-backgroundspositive overflow-hidden border-t [border-top-style:solid] border-backgroundstint-3">
         <div className="flex flex-col lg:flex-row w-full max-w-[1552px] items-start gap-8 lg:gap-12 mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-          <div className="flex flex-col w-full lg:w-auto max-w-[398px] items-start gap-6 sm:gap-9 px-4 sm:px-0 order-1 lg:order-1">
-          <div className="flex items-center relative self-stretch w-full flex-[0_0_auto]">
+          <div className="flex flex-col w-full lg:w-auto md:max-w-[398px] items-center md:items-start gap-6 sm:gap-9 px-4 sm:px-0 order-1 lg:order-1">
+          <div className="flex items-center justify-center md:justify-start relative self-stretch w-full flex-[0_0_auto]">
             <div className="inline-flex items-center gap-8 sm:gap-12 relative flex-[0_0_auto]">
               <img
                 className="relative w-20 sm:w-[104px] h-auto"
@@ -95,25 +95,37 @@ export const FooterSection = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="inline-flex flex-col items-start gap-9 relative flex-[0_0_auto]">
-            <div className="flex flex-col items-start gap-4 relative self-stretch w-full flex-[0_0_auto]">
-              <h3 className="relative self-stretch mt-[-1.00px] [font-family:'Gilroy-SemiBold',Helvetica] font-semibold text-textsbase text-[length:var(--t5-semibold-font-size)] tracking-[var(--t5-semibold-letter-spacing)] leading-[var(--t5-semibold-line-height)]" style={{ fontWeight: 600 }}>
+          <div className="inline-flex flex-col items-center md:items-start gap-9 relative flex-[0_0_auto]">
+            <div className="flex flex-row md:flex-col items-center md:items-start gap-4 relative self-stretch w-full flex-[0_0_auto]">
+              <h3 className="relative mt-[-1.00px] [font-family:'Gilroy-SemiBold',Helvetica] font-semibold text-textsbase text-[length:var(--t5-semibold-font-size)] tracking-[var(--t5-semibold-letter-spacing)] leading-[var(--t5-semibold-line-height)] text-center md:text-left whitespace-nowrap" style={{ fontWeight: 600 }}>
                 Get the free app
               </h3>
 
-              <div className="relative flex-[0_0_auto]">
+              <div className="block md:hidden relative flex-[0_0_auto]">
                 <a href="#" aria-label="Download on App Store">
                   <img
                     alt="Download on App Store"
-                    src="https://c.animaapp.com/LyD8HZXb/img/frame-626299300.svg"
+                    src="https://cdn-cms-uploads.picsart.com/cms-uploads/6277a70a-c244-48b5-8551-816bfb48ccb1.svg"
+                    className="h-auto"
+                    style={{ maxHeight: '40px', width: 'auto' }}
+                  />
+                </a>
+              </div>
+              <div className="hidden md:block relative flex-[0_0_auto]">
+                <a href="#" aria-label="Get it on Google Play and Microsoft">
+                  <img
+                    alt="Get it on Google Play and Microsoft"
+                    src="https://cdn-cms-uploads.picsart.com/cms-uploads/152feefb-e273-41e0-b8ad-6bc69522f2d9.svg"
+                    className="h-auto"
+                    style={{ maxHeight: '40px', width: 'auto' }}
                   />
                 </a>
               </div>
             </div>
 
-            <div className="flex flex-col items-start gap-4 relative self-stretch w-full flex-[0_0_auto]">
+            <div className="flex flex-col items-center md:items-start gap-4 relative self-stretch w-full flex-[0_0_auto]">
               <nav
-                className="inline-flex items-start gap-2 relative flex-[0_0_auto]"
+                className="inline-flex items-center md:items-start gap-2 relative flex-[0_0_auto]"
                 aria-label="Social media"
               >
                 {socialIcons.map((icon, index) => (
@@ -135,140 +147,232 @@ export const FooterSection = (): JSX.Element => {
           </div>
 
           <img
-            className="relative w-16 h-16"
+            className="relative w-16 h-16 mx-auto md:mx-0"
             alt="Certification badge"
             src="https://c.animaapp.com/LyD8HZXb/img/mask-group@2x.png"
           />
         </div>
 
-          <div className="flex flex-col lg:flex-row w-full lg:flex-1 items-start gap-4 lg:gap-8 order-2 lg:order-2">
-            <div className="relative flex-1 grow w-full lg:min-h-[274px]">
-              <button
-                onClick={() => toggleAccordion("explore")}
-                className="lg:hidden flex items-center justify-between w-full py-3 px-0 border-b border-background-colorstint-3"
-                aria-expanded={openAccordions.explore}
-                aria-controls="explore-accordion"
-              >
-                <h2 className="flex items-center justify-start [font-family:'Gilroy-SemiBold',Helvetica] font-semibold text-textsbase text-[length:var(--t6-t6-semibold-font-size)] tracking-[var(--t6-t6-semibold-letter-spacing)] leading-[var(--t6-t6-semibold-line-height)]" style={{ fontWeight: 600 }}>
-                  Explore
-                </h2>
-                <img
-                  className={`w-5 h-5 transition-transform duration-200 ${openAccordions.explore ? 'rotate-180' : ''}`}
-                  alt={openAccordions.explore ? "Collapse" : "Expand"}
-                  src="https://c.animaapp.com/LyD8HZXb/img/iconchevrondown-3.svg"
-                />
-              </button>
-              <h2 className="hidden lg:flex absolute top-0 left-0 h-7 items-center justify-start [font-family:'Gilroy-SemiBold',Helvetica] font-semibold text-textsbase text-[length:var(--t6-t6-semibold-font-size)] tracking-[var(--t6-t6-semibold-letter-spacing)] leading-[var(--t6-t6-semibold-line-height)]" style={{ fontWeight: 600 }}>
-                Explore
-              </h2>
-              <nav
-                id="explore-accordion"
-                className={`flex flex-col w-full max-w-[209px] items-start gap-1 lg:relative lg:top-[38px] lg:left-0 transition-all duration-200 ${
-                  openAccordions.explore ? 'block' : 'hidden'
-                } lg:block`}
-                aria-label="Explore"
-              >
-                {exploreLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href="#"
-                    className="flex items-start px-0 py-2 relative self-stretch w-full flex-[0_0_auto] rounded-[3px]"
-                  >
-                    <span
-                      className={`relative flex items-center justify-center w-fit mt-[-1.00px] font-t4-t4-medium font-[number:var(--t4-t4-medium-font-weight)] text-[length:var(--t4-t4-medium-font-size)] tracking-[var(--t4-t4-medium-letter-spacing)] leading-[var(--t4-t4-medium-line-height)] whitespace-nowrap [font-style:var(--t4-t4-medium-font-style)] transition-colors hover:text-accentsprimary-packagebase-default ${
-                        link.highlighted ? 'text-accentsprimary-packagebase-default' : 'text-textstint-1'
-                      }`}
-                    >
-                      {link.text}
-                    </span>
-                  </a>
-                ))}
-              </nav>
+          <div className="flex flex-col lg:flex-row w-full lg:flex-1 items-start gap-4 lg:gap-4 order-2 lg:order-2 lg:justify-end">
+            {/* Mobile Accordion - Separate Items */}
+            <div className="lg:hidden flex flex-col w-full gap-4">
+              {/* Explore Section */}
+              <div className="w-full bg-white rounded-lg border-2 border-solid overflow-hidden" style={{ borderColor: '#E0E0E0' }}>
+                <button
+                  onClick={() => toggleAccordion("explore")}
+                  className={`flex items-center justify-between w-full h-[44px] px-4 transition-colors ${
+                    openAccordions.explore ? 'bg-[#F5F5F5] border-b-2 border-solid' : 'bg-transparent hover:bg-gray-50'
+                  }`}
+                  style={openAccordions.explore ? { borderColor: '#E0E0E0' } : {}}
+                  aria-expanded={openAccordions.explore}
+                  aria-controls="explore-accordion"
+                >
+                  <h2 className="flex items-center justify-start [font-family:'Gilroy-Medium',Helvetica] font-medium text-base leading-6" style={{ fontWeight: 500, color: '#616161' }}>
+                    Explore
+                  </h2>
+                  <img
+                    className={`w-6 h-6 transition-all duration-200 ${openAccordions.explore ? 'rotate-180' : ''}`}
+                    style={openAccordions.explore ? { filter: 'brightness(0)' } : {}}
+                    alt={openAccordions.explore ? "Collapse" : "Expand"}
+                    src="https://cdn-cms-uploads.picsart.com/cms-uploads/685c52dc-2a4a-4781-9e05-9e9a1f572b14.svg"
+                  />
+                </button>
+                <nav
+                  id="explore-accordion"
+                  className={`overflow-hidden transition-all duration-200 ${
+                    openAccordions.explore ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                  aria-label="Explore"
+                >
+                  <div className="flex flex-col items-start gap-1 px-4 pb-3 pt-1">
+                    {exploreLinks.map((link, index) => (
+                      <a
+                        key={index}
+                        href="#"
+                        className="flex items-start px-0 py-2 relative self-stretch w-full flex-[0_0_auto] rounded-[3px]"
+                      >
+                        <span
+                          className={`relative flex items-center justify-center w-fit mt-[-1.00px] font-t4-t4-medium font-[number:var(--t4-t4-medium-font-weight)] text-[length:var(--t4-t4-medium-font-size)] tracking-[var(--t4-t4-medium-letter-spacing)] leading-[var(--t4-t4-medium-line-height)] whitespace-nowrap [font-style:var(--t4-t4-medium-font-style)] transition-colors hover:text-accentsprimary-packagebase-default ${
+                            link.highlighted ? 'text-accentsprimary-packagebase-default' : 'text-textstint-1'
+                          }`}
+                        >
+                          {link.text}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </nav>
+              </div>
+
+              {/* Solutions Section */}
+              <div className="w-full bg-white rounded-lg border-2 border-solid overflow-hidden" style={{ borderColor: '#E0E0E0' }}>
+                <button
+                  onClick={() => toggleAccordion("solutions")}
+                  className={`flex items-center justify-between w-full h-[44px] px-4 transition-colors ${
+                    openAccordions.solutions ? 'bg-[#F5F5F5] border-b-2 border-solid' : 'bg-transparent hover:bg-gray-50'
+                  }`}
+                  style={openAccordions.solutions ? { borderColor: '#E0E0E0' } : {}}
+                  aria-expanded={openAccordions.solutions}
+                  aria-controls="solutions-accordion"
+                >
+                  <h2 className="flex items-center justify-start [font-family:'Gilroy-Medium',Helvetica] font-medium text-base leading-6" style={{ fontWeight: 500, color: '#616161' }}>
+                    Solutions
+                  </h2>
+                  <img
+                    className={`w-6 h-6 transition-all duration-200 ${openAccordions.solutions ? 'rotate-180' : ''}`}
+                    style={openAccordions.solutions ? { filter: 'brightness(0)' } : {}}
+                    alt={openAccordions.solutions ? "Collapse" : "Expand"}
+                    src="https://cdn-cms-uploads.picsart.com/cms-uploads/685c52dc-2a4a-4781-9e05-9e9a1f572b14.svg"
+                  />
+                </button>
+                <nav
+                  id="solutions-accordion"
+                  className={`overflow-hidden transition-all duration-200 ${
+                    openAccordions.solutions ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                  aria-label="Solutions"
+                >
+                  <div className="flex flex-col items-start gap-1 px-4 pb-3 pt-1">
+                    {solutionsLinks.map((link, index) => (
+                      <a
+                        key={index}
+                        href="#"
+                        className="flex items-start px-0 py-2 relative self-stretch w-full flex-[0_0_auto] rounded-[3px]"
+                      >
+                        <span className={`relative flex items-center justify-center w-fit mt-[-1.00px] font-t4-t4-medium font-[number:var(--t4-t4-medium-font-weight)] text-[length:var(--t4-t4-medium-font-size)] tracking-[var(--t4-t4-medium-letter-spacing)] leading-[var(--t4-t4-medium-line-height)] whitespace-nowrap [font-style:var(--t4-t4-medium-font-style)] transition-colors hover:text-accentsprimary-packagebase-default ${
+                          link.highlighted ? 'text-accentsprimary-packagebase-default' : 'text-textstint-1'
+                        }`}>
+                          {link.text}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </nav>
+              </div>
+
+              {/* Company Section */}
+              <div className="w-full bg-white rounded-lg border-2 border-solid overflow-hidden" style={{ borderColor: '#E0E0E0' }}>
+                <button
+                  onClick={() => toggleAccordion("company")}
+                  className={`flex items-center justify-between w-full h-[44px] px-4 transition-colors ${
+                    openAccordions.company ? 'bg-[#F5F5F5] border-b-2 border-solid' : 'bg-transparent hover:bg-gray-50'
+                  }`}
+                  style={openAccordions.company ? { borderColor: '#E0E0E0' } : {}}
+                  aria-expanded={openAccordions.company}
+                  aria-controls="company-accordion"
+                >
+                  <h2 className="flex items-center justify-start [font-family:'Gilroy-Medium',Helvetica] font-medium text-base leading-6" style={{ fontWeight: 500, color: '#616161' }}>
+                    Company
+                  </h2>
+                  <img
+                    className={`w-6 h-6 transition-all duration-200 ${openAccordions.company ? 'rotate-180' : ''}`}
+                    style={openAccordions.company ? { filter: 'brightness(0)' } : {}}
+                    alt={openAccordions.company ? "Collapse" : "Expand"}
+                    src="https://cdn-cms-uploads.picsart.com/cms-uploads/685c52dc-2a4a-4781-9e05-9e9a1f572b14.svg"
+                  />
+                </button>
+                <nav
+                  id="company-accordion"
+                  className={`overflow-hidden transition-all duration-200 ${
+                    openAccordions.company ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                  aria-label="Company"
+                >
+                  <div className="flex flex-col items-start gap-1 px-4 pb-3 pt-1">
+                    {companyLinks.map((link, index) => (
+                      <a
+                        key={index}
+                        href="#"
+                        className="flex items-start px-0 py-2 relative self-stretch w-full flex-[0_0_auto] rounded-[3px]"
+                      >
+                        <span className={`relative flex items-center justify-center w-fit mt-[-1.00px] font-t4-t4-medium font-[number:var(--t4-t4-medium-font-weight)] text-[length:var(--t4-t4-medium-font-size)] tracking-[var(--t4-t4-medium-letter-spacing)] leading-[var(--t4-t4-medium-line-height)] whitespace-nowrap [font-style:var(--t4-t4-medium-font-style)] transition-colors hover:text-accentsprimary-packagebase-default ${
+                          link.highlighted ? 'text-accentsprimary-packagebase-default' : 'text-textstint-1'
+                        }`}>
+                          {link.text}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </nav>
+              </div>
             </div>
 
-          <div className="relative flex-1 grow w-full lg:min-h-[314px]">
-            <button
-              onClick={() => toggleAccordion("solutions")}
-              className="lg:hidden flex items-center justify-between w-full py-3 px-0 border-b border-background-colorstint-3"
-              aria-expanded={openAccordions.solutions}
-              aria-controls="solutions-accordion"
-            >
-              <h2 className="flex items-center justify-start [font-family:'Gilroy-SemiBold',Helvetica] font-semibold text-textsbase text-[length:var(--t6-t6-semibold-font-size)] tracking-[var(--t6-t6-semibold-letter-spacing)] leading-[var(--t6-t6-semibold-line-height)]" style={{ fontWeight: 600 }}>
-                Solutions
-              </h2>
-              <img
-                className={`w-5 h-5 transition-transform duration-200 ${openAccordions.solutions ? 'rotate-180' : ''}`}
-                alt={openAccordions.solutions ? "Collapse" : "Expand"}
-                src="https://c.animaapp.com/LyD8HZXb/img/iconchevrondown-3.svg"
-              />
-            </button>
-            <h2 className="hidden lg:flex absolute top-0 left-0 h-7 items-center justify-start [font-family:'Gilroy-SemiBold',Helvetica] font-semibold text-textsbase text-[length:var(--t6-t6-semibold-font-size)] tracking-[var(--t6-t6-semibold-letter-spacing)] leading-[var(--t6-t6-semibold-line-height)]" style={{ fontWeight: 600 }}>
-              Solutions
-            </h2>
-            <nav
-              id="solutions-accordion"
-              className={`flex flex-col w-full max-w-[209px] items-start gap-1 lg:relative lg:top-[38px] lg:left-0 transition-all duration-200 ${
-                openAccordions.solutions ? 'block' : 'hidden'
-              } lg:block`}
-              aria-label="Solutions"
-            >
-              {solutionsLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="flex items-start px-0 py-2 relative self-stretch w-full flex-[0_0_auto] rounded-[3px]"
+            {/* Desktop Layout */}
+            <div className="hidden lg:flex flex-row w-full lg:flex-1 items-start gap-4 lg:gap-4 lg:justify-end">
+              <div className="relative w-full lg:w-[166px] xl:w-[209px] lg:min-h-[274px]">
+                <h2 className="hidden lg:flex absolute top-0 left-0 h-7 items-center justify-start [font-family:'Gilroy-SemiBold',Helvetica] font-semibold text-textsbase text-[length:var(--t6-t6-semibold-font-size)] tracking-[var(--t6-t6-semibold-letter-spacing)] leading-[var(--t6-t6-semibold-line-height)]" style={{ fontWeight: 600 }}>
+                  Explore
+                </h2>
+                <nav
+                  className="flex flex-col w-full lg:w-[166px] xl:w-[209px] items-start gap-1 lg:relative lg:top-[38px] lg:left-0"
+                  aria-label="Explore"
                 >
-                  <span className={`relative flex items-center justify-center w-fit mt-[-1.00px] font-t4-t4-medium font-[number:var(--t4-t4-medium-font-weight)] text-[length:var(--t4-t4-medium-font-size)] tracking-[var(--t4-t4-medium-letter-spacing)] leading-[var(--t4-t4-medium-line-height)] whitespace-nowrap [font-style:var(--t4-t4-medium-font-style)] transition-colors hover:text-accentsprimary-packagebase-default ${
-                    link.highlighted ? 'text-accentsprimary-packagebase-default' : 'text-textstint-1'
-                  }`}>
-                    {link.text}
-                  </span>
-                </a>
-              ))}
-            </nav>
-          </div>
+                  {exploreLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href="#"
+                      className="flex items-start px-0 py-2 relative self-stretch w-full flex-[0_0_auto] rounded-[3px]"
+                    >
+                      <span
+                        className={`relative flex items-center justify-center w-fit mt-[-1.00px] font-t4-t4-medium font-[number:var(--t4-t4-medium-font-weight)] text-[length:var(--t4-t4-medium-font-size)] tracking-[var(--t4-t4-medium-letter-spacing)] leading-[var(--t4-t4-medium-line-height)] whitespace-nowrap [font-style:var(--t4-t4-medium-font-style)] transition-colors hover:text-accentsprimary-packagebase-default ${
+                          link.highlighted ? 'text-accentsprimary-packagebase-default' : 'text-textstint-1'
+                        }`}
+                      >
+                        {link.text}
+                      </span>
+                    </a>
+                  ))}
+                </nav>
+              </div>
 
-          <div className="relative flex-1 grow w-full lg:min-h-[314px] mr-[-2.00px]">
-            <button
-              onClick={() => toggleAccordion("company")}
-              className="lg:hidden flex items-center justify-between w-full py-3 px-0 border-b border-background-colorstint-3"
-              aria-expanded={openAccordions.company}
-              aria-controls="company-accordion"
-            >
-              <h2 className="flex items-center justify-start [font-family:'Gilroy-SemiBold',Helvetica] font-semibold text-textsbase text-[length:var(--t6-t6-semibold-font-size)] tracking-[var(--t6-t6-semibold-letter-spacing)] leading-[var(--t6-t6-semibold-line-height)]" style={{ fontWeight: 600 }}>
-                Company
-              </h2>
-              <img
-                className={`w-5 h-5 transition-transform duration-200 ${openAccordions.company ? 'rotate-180' : ''}`}
-                alt={openAccordions.company ? "Collapse" : "Expand"}
-                src="https://c.animaapp.com/LyD8HZXb/img/iconchevrondown-3.svg"
-              />
-            </button>
-            <h2 className="hidden lg:flex absolute top-0 left-0 h-7 items-center justify-start [font-family:'Gilroy-SemiBold',Helvetica] font-semibold text-textsbase text-[length:var(--t6-t6-semibold-font-size)] tracking-[var(--t6-t6-semibold-letter-spacing)] leading-[var(--t6-t6-semibold-line-height)]" style={{ fontWeight: 600 }}>
-              Company
-            </h2>
-            <nav
-              id="company-accordion"
-              className={`flex flex-col w-full max-w-[209px] items-start gap-1 lg:relative lg:top-[38px] lg:left-0 transition-all duration-200 ${
-                openAccordions.company ? 'block' : 'hidden'
-              } lg:block`}
-              aria-label="Company"
-            >
-              {companyLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="flex items-start px-0 py-2 relative self-stretch w-full flex-[0_0_auto] rounded-[3px]"
+              <div className="relative w-full lg:w-[166px] xl:w-[209px] lg:min-h-[314px]">
+                <h2 className="hidden lg:flex absolute top-0 left-0 h-7 items-center justify-start [font-family:'Gilroy-SemiBold',Helvetica] font-semibold text-textsbase text-[length:var(--t6-t6-semibold-font-size)] tracking-[var(--t6-t6-semibold-letter-spacing)] leading-[var(--t6-t6-semibold-line-height)]" style={{ fontWeight: 600 }}>
+                  Solutions
+                </h2>
+                <nav
+                  className="flex flex-col w-full lg:w-[166px] xl:w-[209px] items-start gap-1 lg:relative lg:top-[38px] lg:left-0"
+                  aria-label="Solutions"
                 >
-                  <span className={`relative flex items-center justify-center w-fit mt-[-1.00px] font-t4-t4-medium font-[number:var(--t4-t4-medium-font-weight)] text-[length:var(--t4-t4-medium-font-size)] tracking-[var(--t4-t4-medium-letter-spacing)] leading-[var(--t4-t4-medium-line-height)] whitespace-nowrap [font-style:var(--t4-t4-medium-font-style)] transition-colors hover:text-accentsprimary-packagebase-default ${
-                    link.highlighted ? 'text-accentsprimary-packagebase-default' : 'text-textstint-1'
-                  }`}>
-                    {link.text}
-                  </span>
-                </a>
-              ))}
-            </nav>
-          </div>
+                  {solutionsLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href="#"
+                      className="flex items-start px-0 py-2 relative self-stretch w-full flex-[0_0_auto] rounded-[3px]"
+                    >
+                      <span className={`relative flex items-center justify-center w-fit mt-[-1.00px] font-t4-t4-medium font-[number:var(--t4-t4-medium-font-weight)] text-[length:var(--t4-t4-medium-font-size)] tracking-[var(--t4-t4-medium-letter-spacing)] leading-[var(--t4-t4-medium-line-height)] whitespace-nowrap [font-style:var(--t4-t4-medium-font-style)] transition-colors hover:text-accentsprimary-packagebase-default ${
+                        link.highlighted ? 'text-accentsprimary-packagebase-default' : 'text-textstint-1'
+                      }`}>
+                        {link.text}
+                      </span>
+                    </a>
+                  ))}
+                </nav>
+              </div>
+
+              <div className="relative w-full lg:w-[166px] xl:w-[209px] lg:min-h-[314px]">
+                <h2 className="hidden lg:flex absolute top-0 left-0 h-7 items-center justify-start [font-family:'Gilroy-SemiBold',Helvetica] font-semibold text-textsbase text-[length:var(--t6-t6-semibold-font-size)] tracking-[var(--t6-t6-semibold-letter-spacing)] leading-[var(--t6-t6-semibold-line-height)]" style={{ fontWeight: 600 }}>
+                  Company
+                </h2>
+                <nav
+                  className="flex flex-col w-full lg:w-[166px] xl:w-[209px] items-start gap-1 lg:relative lg:top-[38px] lg:left-0"
+                  aria-label="Company"
+                >
+                  {companyLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href="#"
+                      className="flex items-start px-0 py-2 relative self-stretch w-full flex-[0_0_auto] rounded-[3px]"
+                    >
+                      <span className={`relative flex items-center justify-center w-fit mt-[-1.00px] font-t4-t4-medium font-[number:var(--t4-t4-medium-font-weight)] text-[length:var(--t4-t4-medium-font-size)] tracking-[var(--t4-t4-medium-letter-spacing)] leading-[var(--t4-t4-medium-line-height)] whitespace-nowrap [font-style:var(--t4-t4-medium-font-style)] transition-colors hover:text-accentsprimary-packagebase-default ${
+                        link.highlighted ? 'text-accentsprimary-packagebase-default' : 'text-textstint-1'
+                      }`}>
+                        {link.text}
+                      </span>
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            </div>
           </div>
         </div>
 
