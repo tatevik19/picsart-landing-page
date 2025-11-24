@@ -1,0 +1,1 @@
+export { HeroDesktopWide } from "./HeroDesktopWide";

@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url('https://cdn-cms-uploads.picsart.com/cms-uploads/83408da7-4afa-4bee-923f-a34c8ad0e8db.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: url('https://cdn-cms-uploads.picsart.com/cms-uploads/83408da7-4afa-4bee-923f-a34c8ad0e8db.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy-Semibold';
+  src: url('https://cdn-cms-uploads.picsart.com/cms-uploads/7905cb15-776c-451b-a88f-f83f7c7c2844.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: url('https://cdn-cms-uploads.picsart.com/cms-uploads/7905cb15-776c-451b-a88f-f83f7c7c2844.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('https://cdn-cms-uploads.picsart.com/cms-uploads/581b1421-45e8-4d03-804a-ce3b0189cbd3.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Acorn-Regular';
+  src: url('https://cdn-cms-uploads.picsart.com/cms-uploads/df126db3-37b1-4375-9c28-ed0593432475.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  button,
+  input,
+  select,
+  textarea {
+    @apply appearance-none bg-transparent border-0 outline-none;
+  }
+  
+  /* Set Gilroy as default font family for better fallback */
+  body {
+    font-family: 'Gilroy-Regular', 'Gilroy', Helvetica, Arial, sans-serif;
+  }
+  
+  /* Map generic "Gilroy" references to specific font families */
+  [font-family*="Gilroy"] {
+    font-family: 'Gilroy-Regular', 'Gilroy', Helvetica, Arial, sans-serif;
+  }
+  
+  [font-family*="Gilroy-SemiBold"],
+  [font-family*="Gilroy-Semibold"] {
+    font-family: 'Gilroy-SemiBold', 'Gilroy-Semibold', 'Gilroy', Helvetica, Arial, sans-serif;
+  }
+  
+  [font-family*="Gilroy-Bold"] {
+    font-family: 'Gilroy-Bold', 'Gilroy', Helvetica, Arial, sans-serif;
+  }
+  
+  [font-family*="Gilroy-Medium"] {
+    font-family: 'Gilroy-Medium', 'Gilroy', Helvetica, Arial, sans-serif;
+  }
+  
+  [font-family*="Acorn-Regular"] {
+    font-family: 'Acorn-Regular', Helvetica, Arial, sans-serif;
+  }
+}
+
+:root {
+  --absolute-black-colorsbase-action: rgba(49, 49, 49, 1);
+  --absolute-black-colorsbase-default: rgba(0, 0, 0, 1);
+  --absolutesblack-packagebase-default: rgba(0, 0, 0, 1);
+  --absoluteswhite-packagebase-default: rgba(255, 255, 255, 1);
+  --accentsprimary-packagebase-default: rgba(194, 9, 193, 1);
+  --accentssecondary-packagebase-default: rgba(90, 0, 238, 1);
+  --accentstertiary-packagebase-default: rgba(242, 242, 242, 1);
+  --accentstertiary-packagetext-default: rgba(0, 0, 0, 1);
+  --background-colorsbase: rgba(252, 252, 252, 1);
+  --background-colorsborder: rgba(232, 232, 232, 1);
+  --background-colorspopover: rgba(255, 255, 255, 1);
+  --background-colorstint-1: rgba(247, 247, 247, 1);
+  --background-colorstint-2: rgba(242, 242, 242, 1);
+  --background-colorstint-3: rgba(217, 217, 217, 1);
+  --backgroundspositive: rgba(255, 255, 255, 1);
+  --backgroundstint-3: rgba(232, 232, 232, 1);
+  --ds-use-onlycontrolsbackgroundactive: rgba(238, 238, 238, 1);
+  --ds-use-onlycontrolsbackgrounddefault: rgba(255, 255, 255, 1);
+  --ds-use-onlycontrolsborderdefault: rgba(224, 224, 224, 1);
+  --ds-use-onlycontrolstextactive: rgba(0, 0, 0, 1);
+  --ds-use-onlycontrolstextdefault: rgba(82, 82, 82, 1);
+  --positive-colorsbase-default: rgba(255, 255, 255, 1);
+  --primary-colorsalpha-channelsalpha-10: rgba(194, 9, 193, 0.1);
+  --primary-colorsalpha-channelsalpha-20: rgba(194, 9, 193, 0.2);
+  --primary-colorsbase-active: rgba(116, 5, 116, 1);
+  --primary-colorsbase-default: rgba(194, 9, 193, 1);
+  --primary-colorstext-default: rgba(255, 255, 255, 1);
+  --shadow-shadow-s: 0px 0px 16px 0px rgba(0, 0, 0, 0.24);
+  --t10-t10-semibold-font-family: "Gilroy", Helvetica;
+  --t10-t10-semibold-font-size: 42px;
+  --t10-t10-semibold-font-style: normal;
+  --t10-t10-semibold-font-weight: 600;
+  --t10-t10-semibold-letter-spacing: 0px;
+  --t10-t10-semibold-line-height: 50px;
+  --t3-t3-medium-font-family: "Gilroy", Helvetica;
+  --t3-t3-medium-font-size: 12px;
+  --t3-t3-medium-font-style: normal;
+  --t3-t3-medium-font-weight: 500;
+  --t3-t3-medium-letter-spacing: 0px;
+  --t3-t3-medium-line-height: 16px;
+  --t4-t4-bold-font-family: "Gilroy", Helvetica;
+  --t4-t4-bold-font-size: 14px;
+  --t4-t4-bold-font-style: normal;
+  --t4-t4-bold-font-weight: 700;
+  --t4-t4-bold-letter-spacing: 0px;
+  --t4-t4-bold-line-height: 20px;
+  --t4-t4-medium-font-family: "Gilroy", Helvetica;
+  --t4-t4-medium-font-size: 14px;
+  --t4-t4-medium-font-style: normal;
+  --t4-t4-medium-font-weight: 500;
+  --t4-t4-medium-letter-spacing: 0px;
+  --t4-t4-medium-line-height: 20px;
+  --t4-t4-semibold-font-family: "Gilroy", Helvetica;
+  --t4-t4-semibold-font-size: 14px;
+  --t4-t4-semibold-font-style: normal;
+  --t4-t4-semibold-font-weight: 600;
+  --t4-t4-semibold-letter-spacing: 0px;
+  --t4-t4-semibold-line-height: 20px;
+  --t5-semibold-font-family: "Gilroy", Helvetica;
+  --t5-semibold-font-size: 16px;
+  --t5-semibold-font-style: normal;
+  --t5-semibold-font-weight: 600;
+  --t5-semibold-letter-spacing: 0px;
+  --t5-semibold-line-height: 24px;
+  --t5-t5-medium-font-family: "Gilroy", Helvetica;
+  --t5-t5-medium-font-size: 16px;
+  --t5-t5-medium-font-style: normal;
+  --t5-t5-medium-font-weight: 500;
+  --t5-t5-medium-letter-spacing: 0px;
+  --t5-t5-medium-line-height: 24px;
+  --t5-t5-semibold-font-family: "Gilroy", Helvetica;
+  --t5-t5-semibold-font-size: 16px;
+  --t5-t5-semibold-font-style: normal;
+  --t5-t5-semibold-font-weight: 600;
+  --t5-t5-semibold-letter-spacing: 0px;
+  --t5-t5-semibold-line-height: 24px;
+  --t6-medium-font-family: "Gilroy", Helvetica;
+  --t6-medium-font-size: 20px;
+  --t6-medium-font-style: normal;
+  --t6-medium-font-weight: 500;
+  --t6-medium-letter-spacing: 0px;
+  --t6-medium-line-height: 28px;
+  --t6-semibold-font-family: "Gilroy", Helvetica;
+  --t6-semibold-font-size: 20px;
+  --t6-semibold-font-style: normal;
+  --t6-semibold-font-weight: 600;
+  --t6-semibold-letter-spacing: 0px;
+  --t6-semibold-line-height: 28px;
+  --t6-t6-medium-font-family: "Gilroy", Helvetica;
+  --t6-t6-medium-font-size: 20px;
+  --t6-t6-medium-font-style: normal;
+  --t6-t6-medium-font-weight: 500;
+  --t6-t6-medium-letter-spacing: 0px;
+  --t6-t6-medium-line-height: 28px;
+  --t6-t6-regular-font-family: "Gilroy", Helvetica;
+  --t6-t6-regular-font-size: 20px;
+  --t6-t6-regular-font-style: normal;
+  --t6-t6-regular-font-weight: 400;
+  --t6-t6-regular-letter-spacing: 0px;
+  --t6-t6-regular-line-height: 28px;
+  --t6-t6-semibold-font-family: "Gilroy", Helvetica;
+  --t6-t6-semibold-font-size: 20px;
+  --t6-t6-semibold-font-style: normal;
+  --t6-t6-semibold-font-weight: 600;
+  --t6-t6-semibold-letter-spacing: 0px;
+  --t6-t6-semibold-line-height: 28px;
+  --t7-t7-medium-font-family: "Gilroy", Helvetica;
+  --t7-t7-medium-font-size: 24px;
+  --t7-t7-medium-font-style: normal;
+  --t7-t7-medium-font-weight: 500;
+  --t7-t7-medium-letter-spacing: 0px;
+  --t7-t7-medium-line-height: 32px;
+  --t7-t7-regular-font-family: "Gilroy", Helvetica;
+  --t7-t7-regular-font-size: 24px;
+  --t7-t7-regular-font-style: normal;
+  --t7-t7-regular-font-weight: 400;
+  --t7-t7-regular-letter-spacing: 0px;
+  --t7-t7-regular-line-height: 32px;
+  --t7-t7-semibold-font-family: "Gilroy", Helvetica;
+  --t7-t7-semibold-font-size: 24px;
+  --t7-t7-semibold-font-style: normal;
+  --t7-t7-semibold-font-weight: 600;
+  --t7-t7-semibold-letter-spacing: 0px;
+  --t7-t7-semibold-line-height: 32px;
+  --t9-t9-semibold-font-family: "Gilroy", Helvetica;
+  --t9-t9-semibold-font-size: 36px;
+  --t9-t9-semibold-font-style: normal;
+  --t9-t9-semibold-font-weight: 600;
+  --t9-t9-semibold-letter-spacing: 0px;
+  --t9-t9-semibold-line-height: 48px;
+  --text-colorbase: rgba(0, 0, 0, 1);
+  --text-colorsbase: rgba(0, 0, 0, 1);
+  --text-colorstint-1: rgba(76, 76, 76, 1);
+  --text-colorstint-2: rgba(128, 128, 128, 1);
+  --textsbase: rgba(0, 0, 0, 1);
+  --textspositive: rgba(255, 255, 255, 1);
+  --textstint-1: rgba(76, 76, 76, 1);
+  --textstint-2: rgba(128, 128, 128, 1);
+  --white: rgba(255, 255, 255, 1);
+  --x-new-colors-will-be-deletedtext-light-modebase: rgba(0, 0, 0, 1);
+  /* Hero section CSS variables */
+  --control-guide-web-mobile-blockheight: 48px;
+  --control-guide-web-mobile-contentgaphorizontal: var(--spacing-s8);
+  --control-guide-web-mobile-contentpaddinghorizontal: var(--spacing-s4);
+  --control-guide-web-mobile-contentpaddingvertical: var(--spacing-s0);
+  --control-guide-web-mobile-paddinghorizontal: var(--spacing-s12);
+  --control-guide-web-mobile-paddingvertical: var(--spacing-s12);
+  --control-guide-web-mobile-spacebetweeniconsandcontent: var(--spacing-s4);
+  --mode-DS-USE-ONLY-controls-text-default: rgba(82, 82, 82, 1);
+  --mode-secondary-base-default: rgba(90, 0, 238, 1);
+  --spacing-s0: 0px;
+  --spacing-s10: 10px;
+  --spacing-s12: 12px;
+  --spacing-s2: 2px;
+  --spacing-s4: 4px;
+  --spacing-s8: 8px;
+  --text-colorsbase: rgba(0, 0, 0, 1);
+  --text-colorstint-1: rgba(76, 76, 76, 1);
+  --text-colorstint-2: rgba(128, 128, 128, 1);
+}
+
+/* Button hover states - all buttons with primary color should use #740574 on hover */
+button.bg-primary-colorsbase-default:hover,
+button[class*="bg-primary-colorsbase-default"]:hover {
+  background-color: #740574 !important;
+}
+
+/* Partners marquee animation */
+.animate-marquee-seamless-flow {
+  animation: marquee-seamless-flow 40s linear infinite;
+}
+
+@keyframes marquee-seamless-flow {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Fade in animation for HowToSection */
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+

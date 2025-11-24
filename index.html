@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Navigation Header - Announcement Bar & Navigation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @font-face {
+        font-family: "Gilroy-Regular";
+        src: url("https://cdn-cms-uploads.picsart.com/cms-uploads/83408da7-4afa-4bee-923f-a34c8ad0e8db.otf")
+          format("opentype");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Gilroy-Medium";
+        src: url("https://cdn-cms-uploads.picsart.com/cms-uploads/83408da7-4afa-4bee-923f-a34c8ad0e8db.otf")
+          format("opentype");
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Gilroy-SemiBold";
+        src: url("https://cdn-cms-uploads.picsart.com/cms-uploads/7905cb15-776c-451b-a88f-f83f7c7c2844.otf")
+          format("opentype");
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Gilroy-Bold";
+        src: url("https://cdn-cms-uploads.picsart.com/cms-uploads/581b1421-45e8-4d03-804a-ce3b0189cbd3.otf")
+          format("opentype");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Acorn-Regular";
+        src: url("https://cdn-cms-uploads.picsart.com/cms-uploads/df126db3-37b1-4375-9c28-ed0593432475.otf")
+          format("opentype");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Acorn-Medium";
+        src: url("https://cdn-cms-uploads.picsart.com/cms-uploads/df126db3-37b1-4375-9c28-ed0593432475.otf")
+          format("opentype");
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+      * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0px;
+        height: 100%;
+      }
+      /* a blue color as a generic focus style */
+      button:focus-visible {
+        outline: 2px solid #4a90e2 !important;
+        outline: -webkit-focus-ring-color auto 5px !important;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+    <link href="tailwind.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="./src/index.tsx"></script>
+  </body>
+</html>
+

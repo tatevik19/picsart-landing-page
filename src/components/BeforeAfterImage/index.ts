@@ -1,0 +1,1 @@
+export { BeforeAfterImage } from "./BeforeAfterImage";
