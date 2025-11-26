@@ -46,11 +46,12 @@ export const SubjectCasesLight = (): JSX.Element => {
   const currentContent = tabContent[activeTab as keyof typeof tabContent];
 
   return (
-    <section
-      className="flex flex-col items-center gap-6 px-3 py-10 lg:px-6 lg:py-16 relative max-w-[1552px] mx-auto w-full bg-[linear-gradient(180deg,rgba(194,9,193,0.2)_1%,rgba(194,9,193,0.05)_50%,rgba(255,255,255,0)_100%),linear-gradient(0deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)]"
-      data-model-id="2921:24611"
-      aria-labelledby="use-case-heading"
-    >
+    <div className="w-full bg-[linear-gradient(180deg,rgba(194,9,193,0.2)_1%,rgba(194,9,193,0.05)_50%,rgba(255,255,255,0)_100%),linear-gradient(0deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)]">
+      <section
+        className="flex flex-col items-center gap-6 px-3 py-10 lg:px-6 lg:py-16 relative max-w-[1552px] mx-auto w-full"
+        data-model-id="2921:24611"
+        aria-labelledby="use-case-heading"
+      >
       <div className="items-start gap-8 flex flex-col relative self-stretch w-full flex-[0_0_auto]">
         <div className="items-center gap-5 flex flex-col relative self-stretch w-full flex-[0_0_auto]">
           <h2 
@@ -175,6 +176,7 @@ export const SubjectCasesLight = (): JSX.Element => {
         </figure>
       </article>
     </section>
+    </div>
   );
 };
 

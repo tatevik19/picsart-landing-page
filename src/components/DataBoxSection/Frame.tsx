@@ -132,7 +132,7 @@ export const Frame = (): JSX.Element => {
 
   return (
     <section
-      className="flex-col gap-12 px-3 py-10 lg:px-6 lg:py-16 bg-background-colorsbase flex items-center relative w-full"
+      className="flex-col gap-12 px-3 py-10 lg:px-6 lg:py-16 flex items-center relative w-full"
       data-model-id="2921:24868"
       aria-labelledby="stats-heading"
     >

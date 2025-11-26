@@ -37,11 +37,12 @@ const featureCards: FeatureCard[] = [
 
 export const LandingPages = (): JSX.Element => {
   return (
-    <section
-      className="flex flex-col items-center gap-[72px] px-3 lg:px-6 py-10 lg:py-16 relative bg-background-colorsbase max-w-[1552px] mx-auto"
-      data-model-id="2921:23871"
-      aria-label="Features section"
-    >
+    <div className="w-full bg-background-colorsbase">
+      <section
+        className="flex flex-col items-center gap-[72px] px-3 lg:px-6 py-10 lg:py-16 relative max-w-[1552px] mx-auto"
+        data-model-id="2921:23871"
+        aria-label="Features section"
+      >
       <div className="flex flex-col md:flex-row items-start justify-center gap-6 relative self-stretch w-full flex-[0_0_auto]">
         {featureCards.map((feature) => (
           <article
@@ -72,5 +73,6 @@ export const LandingPages = (): JSX.Element => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
